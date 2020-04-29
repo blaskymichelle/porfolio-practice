@@ -14,7 +14,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background:#111;
+	background:#282828;
 	z-index: 1000;
 }
 header .logo{
@@ -43,7 +43,7 @@ header ul li a{
 }
 header ul li a.active,
 header ul li a:hover{
-	background: #205aff;
+	background: #3500D3;
 }
 .toggle{
 	display: none;
@@ -60,6 +60,14 @@ section img{
 	max-width: 350px;
 	margin-left: 30px;
 	height: 100%;
+	border-radius: 10px;
+	border-top-left-radius: 40%;
+	border-bottom-right-radius: 40%;
+	
+}
+.smedia{
+	
+	margin: 50px;
 }
 section h2{
 	font-size: 2.5em;
@@ -69,12 +77,16 @@ section h2{
 section p{
 	font-size: 18px;
 }
+section a:hover{
+	background: #3500D3;
+
+}
 section a{
 	display: inline-block;
 	padding: 8px 10px;
 	text-decoration: none;
 	font-size: 18px;
-	background: #111;
+	background: #282828;
 	color: #fff;
 	margin-top: 20px;
 }
@@ -83,6 +95,14 @@ section:nth-child(odd){
 	justify-content: center;
 	align-items: center;
 	background: #111;
+	color: #fff;
+}
+section:nth-child(even){
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background:#190061 ;
+	/*backgroud:#0C0032;*/
 	color: #fff;
 }
 @media (max-width: 992px){

@@ -6,6 +6,7 @@
 	scroll-behavior: smooth;
 	font-family: 'Poppins', sans-serif;
 }
+/************************************navigation****************************/
 header{
 	position: fixed;
 	width: 100%;
@@ -17,12 +18,14 @@ header{
 	background:#282828;
 	z-index: 1000;
 }
+/******************logo in navigation*******************/
 header .logo{
 	color: #fff;
 	font-size:30px;
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-weight: 700;
+	font-family: Comic Sans MS;
 }
 header ul{
     position: relative;
@@ -41,13 +44,16 @@ header ul li a{
 	text-decoration: none;
 	cursor: pointer;
 }
-header ul li a.active,
+/*header ul li a.active,*//***************living it active in home*/
 header ul li a:hover{
 	background: #3500D3;
 }
+
+/*******************HEADER NAVIGATION*********************/
 .toggle{
 	display: none;
 }
+/***************ALL SECTION POSITIONING*********************/
 section{
 	position: relative;
 	display: flex;
@@ -56,31 +62,52 @@ section{
 	min-height: 100vh;
 	padding: 150px 100px 100px;
 }
+
+/***************************HOME IMAGE*********************/
 section img{
 	max-width: 350px;
 	margin-left: 30px;
+	margin-right: 30px;
 	height: 100%;
 	border-radius: 10px;
 	border-top-left-radius: 40%;
 	border-bottom-right-radius: 40%;
 	
 }
-.smedia{
-	
-	margin: 50px;
+/**************SOCIAL IMAGES**********************/
+.social{
+	margin-top: 100px;
+	text-align: center;
+	font-size:40px;
+	color:white;
 }
+/*******************image hover**************/
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+
+/*************TITLES OF EACH SECTION*******************/
 section h2{
 	font-size: 2.5em;
 	text-transform: uppercase;
 
 }
+/****************PARAGRAPHS OF EACH SECTION**********/
 section p{
 	font-size: 18px;
 }
+/**********************CONTACT*******************/
+#contact p{
+	font-size: 25px;
+}
+/***********************read more hover*********/
 section a:hover{
 	background: #3500D3;
 
 }
+/*******************READ MORE BUTTON******/
 section a{
 	display: inline-block;
 	padding: 8px 10px;
@@ -90,24 +117,48 @@ section a{
 	color: #fff;
 	margin-top: 20px;
 }
+/*****************search bar*****************/
+/*input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #282828;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}*/
+/****************ABOUT,PORFOLIO,CONTACT*********/
 section:nth-child(odd){
 	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
 	background: #111;
 	color: #fff;
 }
+/***************HOME,SERVICE,TEAM***************/
 section:nth-child(even){
 	position: relative;
 	justify-content: center;
 	align-items: center;
 	background:#190061 ;
-	/*backgroud:#0C0032;*/
 	color: #fff;
 }
+/************************************************/
 @media (max-width: 992px){
-	
-	section{
+
+/************************/	
+	section{      
 	
 	padding: 100px 50px 50px;
 	flex-direction: column;
@@ -115,10 +166,12 @@ section:nth-child(even){
 	align-items: center;
 	display: flex;
 }
-    section img{
+/************************/
+    section img{  
     	margin: 50px 0 0;
     	max-width: 100%;
     }
+/************************/
 	header ul{
 		position: absolute;
 		top: -100%;
@@ -134,15 +187,18 @@ section:nth-child(even){
 		opacity: 0;
 		transform: translateY(-100%);
 	}
+/*************** HAMBURGER EFFECT to be displayed*********/	
 	header.active ul{
 		opacity: 1;
 		top: 80px;
         transform: translateY(0);
 	}
+/************************/	
 	header ul li a{
 		margin: 5px 0;
 		font-size: 24px;
 	}
+/************************/	
 	.toggle
 	{
 		display: block;
@@ -151,6 +207,7 @@ section:nth-child(even){
 		height: 30px;
 		cursor: pointer;
 	}
+/************************/	
 	.toggle:before
 	{
          content: '';
@@ -163,6 +220,7 @@ section:nth-child(even){
          box-shadow: 0 10px 0 #fff;
          transition: 0.5s;
 	}
+/************************/	
 	.toggle:after
 	{
          content: '';
@@ -174,16 +232,39 @@ section:nth-child(even){
          z-index: 1;
          transition: 0.5s;
 	}
+/************************/	
 	header.active .toggle:before
 	{
            top: 14px;
            transform: rotate(45deg);
            box-shadow: 0 0 0 #fff;
 	}
+/************************/	
 	header.active .toggle:after
 	{
            bottom: 14px;
            transform: rotate(-45deg);
            
 	}
+}
+/********************FOOTER***************/
+.footer {
+   /*position: fixed;*/
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #111;
+   color: white;
+   text-align: center;
+}
+@media (max-width: 640px){
+	section:nth-child(odd){
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #111;
+	color: #fff;
+}
 }
